@@ -31,3 +31,4 @@ script:
   - cd lab-1
   - mkdir build && cd build
   - cmake .. && make
+  - ./test -r compact
