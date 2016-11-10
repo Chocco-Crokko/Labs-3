@@ -27,7 +27,7 @@ before_build:
 
 build_script:
   - cd lab-1
-  - mkdir build && cd cd build
+  - mkdir build && cd build
   - cmake .. -G "NMake Makefiles"
   - nmake
   - nmake install
