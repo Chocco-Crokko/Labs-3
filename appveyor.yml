@@ -1,0 +1,23 @@
+platform:
+    - x86
+    - x64
+
+environment:
+    matrix:
+        - VSVER: 14
+
+configuration:
+    - plain
+#    - shared
+
+install:
+  - set INSTALL_PREFIX=%APPVEYOR_BUILD_FOLDER%\build
+
+
+build_script:
+  - cd lab-1
+  - mkdir build
+  - cd build
+  - cmake .. -G "NMake Makefiles"
+  - nmake
+  - nmake install
